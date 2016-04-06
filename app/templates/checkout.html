@@ -1,0 +1,36 @@
+<div class="checkout-wrapper">
+  <div   
+        class="checkout-product">
+    <div class="image-left">
+      <img ng-src="{{disco.picture}}">
+    </div>
+    <div class="product-details">
+      <div class="name">
+        {{disco.title}}
+      </div>
+      <div class="price">
+        {{disco.displayPrice}}
+      </div> 
+    </div>
+    <div style="clear: both"></div>
+  </div> 
+  <div class="checkout">
+    <h1>
+      <i class="fa fa-credit-card"></i>
+      Payment
+    </h1>
+    <div class="credit-card-input">
+      Credit Card Number:
+      <input type="text" ng-model="stripeToken.number" />
+    </div>
+    <div class="checkout-button" ng-click="checkout()">
+      Check Out
+    </div>
+    <div class="checkout-error" ng-show="error">
+      {{error}}
+    </div>
+    <div class="checkout-success" ng-show="checkedOut">
+      Checked out successfully!
+    </div>
+  </div>
+</div>
